@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elite Training - Seu Personal Trainer</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary-color: #ff4d4d;
+        --secondary-color: #333;
+      }
+
+      .hero-section {
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+          url("../images/pexels-anush-1229356.jpg") center/cover;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        color: white;
+      }
+
+      .parallax {
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .motivation-section {
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+          url("../images/pexels-sabel-blanco-662810-1638336.jpg") center/cover;
+        height: 400px;
+        color: white;
+        padding: 100px 0;
+      }
+
+      .service-card {
+        transition: transform 0.3s ease;
+        cursor: pointer;
+        height: 100%;
+      }
+
+      .service-card:hover {
+        transform: translateY(-10px);
+      }
+
+      .cta-section {
+        
+        background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+          url("../images/pexels-victorfreitas-685531.jpg") center/cover;
+        color: white;
+        padding: 100px 0;
+      }
+
+      .whatsapp-btn {
+        background-color: #25d366;
+        color: white;
+        padding: 15px 30px;
+        border-radius: 30px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+      }
+
+      .whatsapp-btn:hover {
+        background-color: #128c7e;
+        color: white;
+        transform: scale(1.05);
+      }
+
+      .testimonial-card {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 15px;
+        padding: 20px;
+      }
+
+      .navbar {
+        transition: background 0.3s ease;
+      }
+
+      .navbar.scrolled {
+        background: rgba(0, 0, 0, 0.9) !important;
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .animate-fadeInUp {
+        animation: fadeInUp 1s ease;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  
+        <a class="navbar-brand" href="#">Elite Training</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#home">Início</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Serviços</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">Sobre</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contato</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8" data-aos="fade-right">
+            <h1 class="display-3 fw-bold mb-4">
+              Transforme seu corpo,<br />Transforme sua vida
+            </h1>
+            <p class="lead mb-4">
+              Treinamento personalizado para alcançar seus objetivos de forma
+              eficiente e segura.
+            </p>
+            <a href="#" class="whatsapp-btn btn" onclick="contatarWhatsApp()">
+              Agendar Avaliação Gratuita
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-5" data-aos="fade-up">Nossos Serviços</h2>
+        <div class="row g-4">
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="card service-card">
+              <img
+                src="../images/pexels-brunogobofoto-2204196.jpg"
+                class="card-img-top"
+                alt="Personal Training"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Personal Training</h5>
+                <p class="card-text">
+                  Treinos personalizados para suas metas específicas.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="card service-card">
+              <img
+                src="../images/pexels-thisisengineering-3912953.jpg"
+                class="card-img-top"
+                alt="Consultoria Online"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Consultoria Online</h5>
+                <p class="card-text">
+                  Acompanhamento remoto com planilhas exclusivas.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="card service-card">
+              <img
+                src="images/pexels-pixabay-414029.jpg"
+                class="card-img-top"
+                alt="Avaliação Física"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Avaliação Física</h5>
+                <p class="card-text">
+                  Análise completa da sua composição corporal.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Motivation Section -->
+    <section class="motivation-section parallax">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-12" data-aos="zoom-in">
+            <h2 class="display-4 mb-4">"No pain, no gain"</h2>
+            <p class="lead">Sua única limitação é você mesmo. Supere-se!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center mb-5" data-aos="fade-up">Depoimentos</h2>
+        <div class="row g-4">
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="testimonial-card">
+              <p class="mb-3">
+                "Resultados incríveis em apenas 3 meses! Melhor investimento que
+                já fiz."
+              </p>
+              <footer class="blockquote-footer">João Silva</footer>
+            </div>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="testimonial-card">
+              <p class="mb-3">
+                "Profissionalismo e dedicação em cada treino. Superou minhas
+                expectativas!"
+              </p>
+              <footer class="blockquote-footer">Maria Santos</footer>
+            </div>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="testimonial-card">
+              <p class="mb-3">
+                "Mudou completamente minha forma de ver a atividade física."
+              </p>
+              <footer class="blockquote-footer">Pedro Oliveira</footer>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section parallax">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-12" data-aos="zoom-in">
+            <h2 class="display-4 mb-4">
+              Pronto para começar sua transformação?
+            </h2>
+            <p class="lead mb-4">
+              Primeira avaliação gratuita! Não perca esta oportunidade.
+            </p>
+            <a
+              href="#"
+              class="whatsapp-btn btn btn-lg"
+              onclick="contatarWhatsApp()"
+            >
+              Agendar Agora
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h5>Elite Training</h5>
+            <p>Transformando vidas através do exercício físico.</p>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <p>Contato: (11) 99999-9999</p>
+            <p>Email: contato@elitetraining.com.br</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <script>
+      // Inicializar AOS (Animate On Scroll)
+      AOS.init({
+        duration: 1000,
+        once: true,
+      });
+
+      // Navbar scroll effect
+      window.addEventListener("scroll", function () {
+        if (window.scrollY > 50) {
+          document.querySelector(".navbar").classList.add("scrolled");
+        } else {
+          document.querySelector(".navbar").classList.remove("scrolled");
+        }
+      });
+
+      // WhatsApp function
+      function contatarWhatsApp() {
+        const mensagem = encodeURIComponent(
+          "Olá, vim através do seu site, gostaria de agendar uma aula"
+        );
+        const numero = "5511999999999"; // Substitua pelo número real
+        window.open(`https://wa.me/${numero}?text=${mensagem}`, "_blank");
+      }
+
+      // Smooth scroll para links do menu
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+
+      // Animação dos cards ao hover
+      document.querySelectorAll(".service-card").forEach((card) => {
+        card.addEventListener("mouseenter", function () {
+          this.style.transform = "translateY(-10px)";
+        });
+
+        card.addEventListener("mouseleave", function () {
+          this.style.transform = "translateY(0)";
+        });
+      });
+    </script>
+  </body>
+</html>
